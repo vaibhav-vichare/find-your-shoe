@@ -1,0 +1,16 @@
+$building-unit: 4px;
+$building-unit-x1_5: $building-unit * 1.5; // 6px;
+$building-unit-x2: $building-unit * 2; // 8px;
+$building-unit-x2_5: $building-unit * 2.5; // 10px;
+$building-unit-x3: $building-unit * 3; // 12px;
+$building-unit-x4: $building-unit * 4; // 16px;
+$building-unit-x5: $building-unit * 5; // 20px;
+$building-unit-x6: $building-unit * 6; // 24px;
+$building-unit-x10: $building-unit * 10; // 40px;
+$building-unit-x20: $building-unit * 20; // 80px;
+$building-unit-x30: $building-unit * 30; // 120px;
+$building-unit-x50: $building-unit * 50; // 200px;
+$building-unit-x110: $building-unit * 110; // 440px;
+$building-unit-x120: $building-unit * 120; // 480px;
+$building-unit-x200: $building-unit * 200; // 800px;
+$modal-width: $building-unit-x110;

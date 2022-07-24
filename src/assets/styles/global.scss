@@ -1,0 +1,131 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+h1 {
+  font-size: $font-size-40;
+  text-align: left;
+  font-weight: normal;
+}
+
+#app {
+  font-family: "PT Sans Narrow";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $text-color;
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  height: 100%;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  border-bottom:  solid 1px $border-color;
+  background-color: $white;
+  .logo {
+    padding: $building-unit-x2;
+  }
+}
+
+section {
+  display: flex;
+  flex-grow: 1;
+  place-items: center;
+}
+
+.homeView {
+
+}
+
+.title {
+  font-size: $font-size-20;
+  font-weight: normal;
+  color: $white;
+  line-height: $building-unit-x6;
+}
+
+footer {
+  bottom: 0;
+  background-color: $text-color;
+  color: $white;
+  padding: $building-unit-x2;
+}
+
+.component-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: $building-unit-x120;
+  box-shadow: 0 $building-unit-x2_5 $building-unit-x2_5 $building-unit-x2_5 $shadow-color;
+  border-radius: $building-unit;
+  background-color: $white;
+  margin-top: $building-unit-x5;
+}
+
+.component-heading {
+  font-size: $font-size-20;
+  font-weight: bold;
+  color: $text-color;
+  text-align: center;
+  background-color: #E8E8E8;
+  padding: $building-unit-x5;
+  border-top-left-radius: $building-unit;
+  border-top-right-radius: $building-unit;
+}
+
+.homeView {
+  background-color: $background-light;
+  background-image: url('~@/assets/images/start-screen-bg.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: $building-unit-x10 $building-unit-x10 0 $building-unit-x10;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+@media (min-width: 1281px) {
+  .homeView {
+    background-size: 50%;
+  }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .homeView {
+    background-size: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .homeView {
+    background-size: 800px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .homeView {
+    background-size: 700px;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .homeView {
+    background-size: 650px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .homeView {
+    background-size: 600px;
+  }
+}

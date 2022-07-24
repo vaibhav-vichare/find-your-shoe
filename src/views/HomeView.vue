@@ -1,18 +1,30 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="homeView">
+      <h1 class="heading">Take the quiz <br />
+        and try your first pair!</h1>
+    <button class="primary-button">Try On Trial</button>
+    <div class="additional-label">30 Days risk free</div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import Quiz from '@/components/Quiz.vue';
 
 @Component({
   components: {
-    HelloWorld,
+    Quiz,
   },
 })
 export default class HomeView extends Vue {}
 </script>
+
+<style lang="scss" scoped>
+@import "../assets/styles/common";
+.additional-label {
+  font-size: $font-size-16;
+  color: $label-colors;
+  font-weight: bold;
+  margin-top: $building-unit-x5;
+}
+</style>

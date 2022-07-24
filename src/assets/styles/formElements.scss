@@ -1,0 +1,28 @@
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  input[type=checkbox] {
+    width: $building-unit-x5;
+    height: $building-unit-x5;
+    font-size: $font-size-20;
+    margin-right: $building-unit-x2_5;
+    border: solid 1px silver;
+  }
+}
+
+input[type=text] {
+  width: $building-unit-x50;
+  height: $building-unit-x10;
+  padding: $building-unit;
+  border-radius: $building-unit;
+  border: solid 1px silver;
+  font-size: $font-size-16;
+  margin-top: $building-unit;
+  color: $text-color;
+}
+
+.error-text {
+  font-size: $font-size-14;
+  color: $error-color;
+  padding-top: $building-unit;
+}

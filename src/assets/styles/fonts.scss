@@ -1,0 +1,11 @@
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-20: 20px;
+$font-size-40: 40px;
+@font-face {
+  font-family: "PT Sans Narrow";
+  src: local("PTSansNarrow-Regular"),
+  url('~@/assets/fonts/PTSansNarrow-Regular.ttf') format("ttf");
+  font-style: normal;
+}
