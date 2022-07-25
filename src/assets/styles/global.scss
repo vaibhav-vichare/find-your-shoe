@@ -38,11 +38,8 @@ section {
   place-items: center;
 }
 
-.homeView {
-
-}
-
 .title {
+  display: flex;
   font-size: $font-size-20;
   font-weight: normal;
   color: $white;
@@ -90,9 +87,13 @@ footer {
   text-align: left;
 }
 
+
 @media (min-width: 1281px) {
   .homeView {
     background-size: 50%;
+    flex-grow: 1;
+    place-items: center;
+    height: 100%
   }
 }
 
@@ -100,12 +101,16 @@ footer {
 @media (min-width: 1025px) and (max-width: 1280px) {
   .homeView {
     background-size: 50%;
+
+    flex-grow: 1;
+    place-items: center;
+    height: 100%
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .homeView {
-    background-size: 800px;
+    background-size: 90%;
   }
 }
 
