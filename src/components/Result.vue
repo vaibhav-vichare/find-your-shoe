@@ -14,15 +14,17 @@
 <!--        //this could come from shoe object if provided as description-->
       </div>
     </div>
+    <button class="primary-button">Shop now</button>
   </div>
 
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import {Component, Vue} from 'vue-property-decorator';
 import {Getter} from 'vuex-class';
 import {ResultStoreObj} from '@/interfaces/ResultInterface';
 import {IShoes} from "@/interfaces/QuizInterface";
+
 @Component({
   components: {
   },

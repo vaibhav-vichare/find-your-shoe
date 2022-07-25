@@ -2,21 +2,23 @@
   <div class="quiz">
     <div class="title">TRY ON QUIZ <br /> 30 DAYS RISK FREE</div>
     <div class="question" v-for="question in currentQuestion" :key="question.id">
-      <div>{{question.copy}}</div>
-      <div class="answers">
-        <div v-for="answer in question.answers" :key="answer.id">
-          <button class="primary-button margin-left" @click="storeResponse(answer)">{{answer.copy}}</button>
-        </div>
-      </div>
+      <Transition name="fade" :duration="550" appear>
+          <div v-if="currentQuestionId > -1">{{question.copy}}</div>
+      </Transition>
+          <div class="answers">
+            <div v-for="answer in question.answers" :key="answer.id">
+              <button class="primary-button margin-left" @click="storeResponse(answer)">{{answer.copy}}</button>
+            </div>
+          </div>
       </div>
   </div>
 
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import {Component, Vue} from 'vue-property-decorator';
 import questionData from '@/assets/data.json';
-import {IQuiz, IAnswer} from '@/interfaces/QuizInterface';
+import {IAnswer, IQuiz} from '@/interfaces/QuizInterface';
 import {ResultStoreObj} from '@/interfaces/ResultInterface';
 import {Getter} from 'vuex-class';
 
