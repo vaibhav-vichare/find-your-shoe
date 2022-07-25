@@ -15,7 +15,7 @@ h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: $text-color;
+  color: $brand-color;
   display: flex;
   flex-flow: column;
   flex-grow: 1;
@@ -48,31 +48,9 @@ section {
 
 footer {
   bottom: 0;
-  background-color: $text-color;
+  background-color: $brand-color;
   color: $white;
   padding: $building-unit-x2;
-}
-
-.component-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: $building-unit-x120;
-  box-shadow: 0 $building-unit-x2_5 $building-unit-x2_5 $building-unit-x2_5 $shadow-color;
-  border-radius: $building-unit;
-  background-color: $white;
-  margin-top: $building-unit-x5;
-}
-
-.component-heading {
-  font-size: $font-size-20;
-  font-weight: bold;
-  color: $text-color;
-  text-align: center;
-  background-color: #E8E8E8;
-  padding: $building-unit-x5;
-  border-top-left-radius: $building-unit;
-  border-top-right-radius: $building-unit;
 }
 
 .homeView {

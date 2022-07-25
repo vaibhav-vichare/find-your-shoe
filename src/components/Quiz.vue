@@ -17,12 +17,15 @@
 import { Component, Vue } from 'vue-property-decorator';
 import questionData from '@/assets/data.json';
 import {IQuiz, IAnswer} from '@/interfaces/QuizInterface';
+import {ResultStoreObj} from '@/interfaces/ResultInterface';
+import {Getter} from 'vuex-class';
 
 @Component({
   components: {
   },
 })
 export default class Quiz extends Vue {
+  @Getter currentObject!: ResultStoreObj;
   quizData: IQuiz = JSON.parse(JSON.stringify(questionData));
   currentQuestionId = 0;
   userData: IAnswer[] = [];
@@ -34,6 +37,10 @@ export default class Quiz extends Vue {
     };
   }
 
+  created() {
+    this.currentObject.shoes = this.quizData.shoes;
+  }
+
   get currentQuestion() {
       return this.quizData.questions.filter( question => {
         return question.id === this.currentQuestionId;
@@ -42,12 +49,23 @@ export default class Quiz extends Vue {
 
   storeResponse(response: IAnswer) {
     this.userData.push(response);
+    this.updateRating(response.ratingIncrease);
     if (response.nextQuestion) {
       this.currentQuestionId = response.nextQuestion;
     } else {
+      this.currentObject.userSelections = this.userData;
       this.$router.push({ name: 'result'});
     }
+  }
 
+  updateRating(ratings) {
+    for (const each of this.currentObject.shoes) {
+      for (const ratingtype in ratings) {
+        if (each.id === ratingtype) {
+          each.rating = each.rating + ratings[ratingtype];
+        }
+      }
+    }
   }
 
 }
@@ -78,7 +96,7 @@ export default class Quiz extends Vue {
     display: flex;
     flex-direction: row;
     margin-top: $building-unit-x20;
-
+    justify-content: center;
     .margin-left {
       margin-left: $building-unit-x5;
     }
