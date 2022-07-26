@@ -1,0 +1,46 @@
+@media (min-width: 1281px) {
+  .homeView {
+    background-size: 50%;
+    flex-grow: 1;
+    place-items: center;
+    height: 100%
+  }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .homeView {
+    background-size: 50%;
+
+    flex-grow: 1;
+    place-items: center;
+    height: 100%
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .homeView {
+    background-size: 90%;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .homeView {
+    background-size: 700px;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .homeView {
+    background-size: 650px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .homeView {
+    background-size: 600px;
+  }
+}

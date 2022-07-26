@@ -9,3 +9,13 @@
     background-color: $black;
   }
 }
+
+.shop-now-button {
+  background-color: $shop-now;
+  opacity: 70%;
+  margin-bottom: $building-unit-x10;
+  &:hover {
+    background-color: $shop-now;
+    opacity: 100%;
+  }
+}

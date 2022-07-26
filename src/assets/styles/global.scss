@@ -65,50 +65,34 @@ footer {
   text-align: left;
 }
 
-
-@media (min-width: 1281px) {
-  .homeView {
-    background-size: 50%;
-    flex-grow: 1;
-    place-items: center;
-    height: 100%
+.result {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  background-color: $background-light;
+  color: $black;
+  padding: 30% 10% 20% 10%;
+  text-align: left;
+  height: 100%;
+  .component-heading {
+    font-size: $font-size-20;
+    font-weight: bold;
+    color: $black;
+    text-align: left;
   }
-}
 
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .homeView {
-    background-size: 50%;
-
-    flex-grow: 1;
-    place-items: center;
-    height: 100%
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .homeView {
-    background-size: 90%;
-  }
-}
-
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .homeView {
-    background-size: 700px;
-  }
-}
-
-
-@media (min-width: 481px) and (max-width: 767px) {
-  .homeView {
-    background-size: 650px;
-  }
-}
-
-
-@media (min-width: 320px) and (max-width: 480px) {
-  .homeView {
-    background-size: 600px;
+  .shoe-card {
+    background-color: $card-color;
+    padding: 3%;
+    display: flex;
+    flex-flow: column;
+    margin-bottom: $building-unit-x5;
+    .shoe-image {
+      padding: 10%;
+      text-align: center;
+    }
+    .description {
+      font-size: $font-size-16;
+    }
   }
 }
